@@ -6,9 +6,13 @@ def main():
 
 def funcion(data):
     try:
-        n=str(data)
+        n=int(data)
         return exadecimal_f(n)
-    except:
-        return "Disculpe,solo acepto numeros"
+
+    except TypeError:
+        return 'Disculpe,solo acepto numeros enteros'
+
+    except ValueError:
+        return 'Disculpe,solo acepto numeros enteros'
 
 main()
